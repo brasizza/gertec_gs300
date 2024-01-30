@@ -83,7 +83,9 @@ class GertecGs300 {
   /// Retrieves the state of the printer.
   Future<GertecResponse> printerState() async {
     final state = GertecResponse.fromJson(await GertecGs300Platform.instance.printerState() ?? '{}');
-    return state.copyWith(content: PrinterState.values.where((pState) => pState.index == (state.content as int)).first);
+    final printerState = PrinterState.values.where((element) => element.value == (state.content as int));
+
+    return state.copyWith(content: (printerState.isNotEmpty ? printerState.first : PrinterState.PRINTER_STATE_UNKNOWN));
   }
 
   /// Wraps the line by the specified number of lines.

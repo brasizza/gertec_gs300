@@ -72,11 +72,6 @@ class _MyAppState extends State<MyApp> {
                       });
                     },
                     child: const Text('check state')),
-                ElevatedButton(
-                    onPressed: () async {
-                      await _gertecPrinterPlugin.getPlatformVersion();
-                    },
-                    child: const Text('check state')),
                 const Divider(),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -194,7 +189,7 @@ class _MyAppState extends State<MyApp> {
                       ),
                       GestureDetector(
                         onTap: () async {
-                          String url = 'https://avatars.githubusercontent.com/u/14101776?s=100';
+                          String url = 'https://jacodouhoje.dev/wp-content/uploads/2023/11/cropped-wordpress_logo_transparent_512x512.png';
                           // convert image to Uint8List format
                           Uint8List byte = (await NetworkAssetBundle(Uri.parse(url)).load(url)).buffer.asUint8List();
                           await _gertecPrinterPlugin.printImage(
@@ -204,7 +199,13 @@ class _MyAppState extends State<MyApp> {
                           );
                         },
                         child: Column(
-                          children: [Image.network('https://avatars.githubusercontent.com/u/14101776?s=100'), const Text('Print this image from WEB!')],
+                          children: [
+                            Image.network(
+                              'https://jacodouhoje.dev/wp-content/uploads/2023/11/cropped-wordpress_logo_transparent_512x512.png',
+                              width: 200,
+                            ),
+                            const Text('Print this image from WEB!')
+                          ],
                         ),
                       ),
                     ],
@@ -218,12 +219,6 @@ class _MyAppState extends State<MyApp> {
                           await _gertecPrinterPlugin.cutPaper(CutPaperType.FULL);
                         },
                         child: const Text('CUT PAPER')),
-                  ]),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
-                    ElevatedButton(onPressed: () async {}, child: const Text('TICKET EXAMPLE')),
                   ]),
                 ),
                 Padding(

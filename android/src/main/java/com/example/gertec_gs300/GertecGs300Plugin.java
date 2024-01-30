@@ -117,6 +117,7 @@ public class GertecGs300Plugin implements FlutterPlugin, MethodCallHandler {
       case "PRINTER_STATE":
         int state = 0;
           state = printer.getPrinterState();
+          Log.d("PRINTER_STATE" , String.valueOf(state));
           result.success(new ReturnObject("OK", state, true).toJson());
 
 
