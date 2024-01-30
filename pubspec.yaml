@@ -1,6 +1,6 @@
 name: gertec_gs300
 description: "Package para trabalhar com impressão no PDV GS300 da gertec"
-version: 0.0.1
+version: 0.0.2
 homepage: "https://github.com/brasizza/gertec_gs300"
 
 environment:

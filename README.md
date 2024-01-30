@@ -1,5 +1,10 @@
 # gertec GS300
 <h1> Package para trabalhar com os componentes da gertec <strong>SOMENTE em ANDROID! </strong></h1>
+<h2> Para impressão de ESCPOS o package irá pedir para ativar o bluetooth , então seu projeto precisa ter </h2>
+
+```xml
+<uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+```
 
 
 # Iniciando
