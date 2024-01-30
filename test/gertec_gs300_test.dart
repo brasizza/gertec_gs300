@@ -8,7 +8,9 @@ import 'package:gertec_gs300/gertec_gs300_method_channel.dart';
 import 'package:gertec_gs300/gertec_gs300_platform_interface.dart';
 import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 
-class MockGertecGs300Platform with MockPlatformInterfaceMixin implements GertecGs300Platform {
+class MockGertecGs300Platform
+    with MockPlatformInterfaceMixin
+    implements GertecGs300Platform {
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
 
@@ -18,7 +20,13 @@ class MockGertecGs300Platform with MockPlatformInterfaceMixin implements GertecG
   }
 
   @override
-  Future<String?> printBarCode({required int width, required int height, required String text, required int align, required int type, required int position}) async {
+  Future<String?> printBarCode(
+      {required int width,
+      required int height,
+      required String text,
+      required int align,
+      required int type,
+      required int position}) async {
     return '';
   }
 
@@ -28,7 +36,8 @@ class MockGertecGs300Platform with MockPlatformInterfaceMixin implements GertecG
   }
 
   @override
-  Future<String?> printQrcode({required int width, required int align, required String text}) async {
+  Future<String?> printQrcode(
+      {required int width, required int align, required String text}) async {
     return '';
   }
 
