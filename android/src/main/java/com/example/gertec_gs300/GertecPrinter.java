@@ -86,8 +86,10 @@ public class GertecPrinter {
         int fontSize = map.get("fontSize") != null ? (int) map.get("fontSize") : 32;
         int textType =  (map.get("bold") != null ? (boolean) map.get("bold") : false) == true ? 1 : 0;
         boolean  underline = map.get("underline") != null ? (boolean) map.get("underline") : false;
+        int  alignText = map.get("align") != null ? (int) map.get("align") : 0;
+
         int paper = map.get("paper") != null ? (int) map.get("paperSize") : 80;
-        this.printer.printData(printText, fontSize, textType, underline, 1, paper, 0);
+        this.printer.printData(printText, fontSize, textType, underline, alignText, paper, 0);
         commitPrinter();
     }
 

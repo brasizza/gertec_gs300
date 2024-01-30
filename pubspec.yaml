@@ -1,7 +1,7 @@
 name: gertec_gs300
-description: "A new Flutter plugin project."
+description: "Package para trabalhar com impressão no PDV GS300 da gertec"
 version: 0.0.1
-homepage: ""
+homepage: "https://github.com/brasizza/gertec_gs300"
 
 environment:
   sdk: '>=3.2.3 <4.0.0'

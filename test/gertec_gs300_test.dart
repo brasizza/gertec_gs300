@@ -7,7 +7,6 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockGertecGs300Platform
     with MockPlatformInterfaceMixin
     implements GertecGs300Platform {
-
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
 }

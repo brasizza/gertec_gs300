@@ -42,16 +42,20 @@ class GertecResponse {
 
   String toJson() => json.encode(toMap());
 
-  factory GertecResponse.fromJson(String source) => GertecResponse.fromMap(json.decode(source) as Map<String, dynamic>);
+  factory GertecResponse.fromJson(String source) =>
+      GertecResponse.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
-  String toString() => 'GertecResponse(message: $message, success: $success, content: $content)';
+  String toString() =>
+      'GertecResponse(message: $message, success: $success, content: $content)';
 
   @override
   bool operator ==(covariant GertecResponse other) {
     if (identical(this, other)) return true;
 
-    return other.message == message && other.success == success && other.content == content;
+    return other.message == message &&
+        other.success == success &&
+        other.content == content;
   }
 
   @override

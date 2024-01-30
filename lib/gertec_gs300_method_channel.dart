@@ -13,13 +13,15 @@ class MethodChannelGertecGs300 extends GertecGs300Platform {
 
   @override
   Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
+    final version =
+        await methodChannel.invokeMethod<String>('getPlatformVersion');
     return version;
   }
 
   @override
   Future<String?> printText(GertecText textObject) async {
-    final version = await methodChannel.invokeMethod<String>('PRINT_TEXT', {'args': textObject.toMap()});
+    final version = await methodChannel
+        .invokeMethod<String>('PRINT_TEXT', {'args': textObject.toMap()});
     return version;
   }
 
@@ -34,18 +36,37 @@ class MethodChannelGertecGs300 extends GertecGs300Platform {
   }
 
   @override
-  Future<String?> printQrcode({required int width, required int align, required String text}) async {
-    return await methodChannel.invokeMethod('PRINT_QRCODE', {"width": width, 'align': align, 'text': text});
+  Future<String?> printQrcode(
+      {required int width, required int align, required String text}) async {
+    return await methodChannel.invokeMethod(
+        'PRINT_QRCODE', {"width": width, 'align': align, 'text': text});
   }
 
   @override
-  Future<String?> printBarCode({required int width, required int height, required String text, required int align, required int type, required int position}) async {
-    return await methodChannel.invokeMethod('PRINT_BARCODE', {'width': width, 'height': height, 'text': text, 'align': align, 'barcode_type': type, 'barcode_text_position': position});
+  Future<String?> printBarCode(
+      {required int width,
+      required int height,
+      required String text,
+      required int align,
+      required int type,
+      required int position}) async {
+    return await methodChannel.invokeMethod('PRINT_BARCODE', {
+      'width': width,
+      'height': height,
+      'text': text,
+      'align': align,
+      'barcode_type': type,
+      'barcode_text_position': position
+    });
   }
 
   @override
   Future<String?> printImage(Uint8List image, int align, int paper) async {
-    Map<String, dynamic> arguments = <String, dynamic>{"data": image, 'align': align, 'paper': paper};
+    Map<String, dynamic> arguments = <String, dynamic>{
+      "data": image,
+      'align': align,
+      'paper': paper
+    };
 
     return await methodChannel.invokeMethod('PRINT_IMAGE', arguments);
   }
