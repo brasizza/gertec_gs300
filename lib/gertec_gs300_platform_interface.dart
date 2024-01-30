@@ -31,10 +31,6 @@ abstract class GertecGs300Platform extends PlatformInterface {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 
-  Future<String?> testDevice() {
-    throw UnimplementedError('platformVersion() has not been implemented.');
-  }
-
   Future<String?> printText(GertecText textObject) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
@@ -51,18 +47,11 @@ abstract class GertecGs300Platform extends PlatformInterface {
     throw UnimplementedError('printRaw() has not been implemented.');
   }
 
-  Future<String?> printBarCode(
-      {required int width,
-      required int height,
-      required String text,
-      required int align,
-      required int type,
-      required int position}) {
+  Future<String?> printBarCode({required int width, required int height, required String text, required int align, required int type, required int position}) {
     throw UnimplementedError('printBarCode() has not been implemented.');
   }
 
-  Future<String?> printQrcode(
-      {required int width, required int align, required String text}) {
+  Future<String?> printQrcode({required int width, required int align, required String text}) {
     throw UnimplementedError('printQrcode() has not been implemented.');
   }
 
