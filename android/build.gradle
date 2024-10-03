@@ -55,6 +55,7 @@ android {
 
     dependencies {
 
+        api files('libs/GS300_APlibrary_criado.jar')
         implementation 'androidx.appcompat:appcompat:1.5.1'
         implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
         implementation 'com.google.code.gson:gson:2.10.1'
